@@ -68,7 +68,9 @@ function adddepartment() {
         type: 'input',
         name: "name",
         message: 'what is the new department name?'
-    }).then(answer => {
-      adddepartments(answer.name);  
+    })
+    db.adddepartments().then(data => {
+        console.log('\n')
+               console.table(data[0])
     })
 }

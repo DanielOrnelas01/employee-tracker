@@ -18,7 +18,8 @@ class DB {
     }
 
     adddepartments(){
-        return db.promise().query('INSERT INTO department');
+            JSON.stringify('INSERT INTO department')
+            return db.promise().query('SELECT * FROM department');
     }
 }
 
