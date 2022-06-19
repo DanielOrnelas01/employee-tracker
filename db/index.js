@@ -18,7 +18,7 @@ class DB {
     }
 
     adddepartments() {
-      JSON.stringify(answer)
+    const obj =  JSON.stringify(answer)
         return db.promise().query('INSERT INTO department');
         return db.promise().query('SELECT * FROM department');
     }
