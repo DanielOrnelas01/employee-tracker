@@ -16,6 +16,10 @@ class DB {
     viewemployees(){
         return db.promise().query('SELECT * FROM employee');
     }
+
+    adddepartments(){
+        return db.promise().query('INSERT INTO department');
+    }
 }
 
 

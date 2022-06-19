@@ -1,4 +1,5 @@
 const { prompt } = require('inquirer');
+const { updateemployees, adddepartments } = require('./db');
 // const { viewdepartments } = require('./db');
 const db = require('./db')
 require('console.table')
@@ -25,6 +26,10 @@ prompt({
                 case 'view all employees':
                     viewemployee()
                     break;
+
+                    case 'add a department':
+                        adddepartment()
+                        break;
 
         default:
             console.log("I do not recognize what your asking for!")
@@ -58,3 +63,12 @@ function viewemployee(){
 }
 
 //add department
+function adddepartment() {
+    prompt({
+        type: 'input',
+        name: "name",
+        message: 'what is the new department name?'
+    }).then(answer => {
+      adddepartments();  
+    })
+}
