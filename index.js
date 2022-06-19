@@ -67,9 +67,8 @@ function adddepartment() {
         name: "name",
         message: 'what is the new department name?'
     }).then(answer => {
-        db.adddepartments().then(answer => {
-            console.log('\n')
-            console.table(answer[0])
+        db.adddepartments(answer).then(answer => {
+            viewdepartment();
         })
     })
 
