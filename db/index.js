@@ -1,26 +1,26 @@
 const db = require('./connection')
 
 class DB {
-    constructor (connection) {
+    constructor(connection) {
         this.connection = connection
-    } 
-    
-   viewdepartments(){
-      return db.promise().query('SELECT * FROM department');
     }
-    
-    viewroles(){
+
+    viewdepartments() {
+        return db.promise().query('SELECT * FROM department');
+    }
+
+    viewroles() {
         return db.promise().query('SELECT * FROM role');
     }
 
-    viewemployees(){
+    viewemployees() {
         return db.promise().query('SELECT * FROM employee');
     }
 
-    adddepartments(){
-       JSON.stringify(data)
-            return db.promise().query('INSERT INTO department');
-            return db.promise().query('SELECT * FROM department');
+    adddepartments() {
+      JSON.stringify(answer)
+        return db.promise().query('INSERT INTO department');
+        return db.promise().query('SELECT * FROM department');
     }
 }
 
@@ -28,7 +28,7 @@ class DB {
 module.exports = new DB(db)
 
 // const it = {
-//     connection: this.connection, 
+//     connection: this.connection,
 //     viewdpartments: function(){
 
 //     }
