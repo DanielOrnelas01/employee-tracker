@@ -17,13 +17,13 @@ VALUES
 ('Operations Manager', 90000, 4);
 
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
+INSERT INTO employee (first_name, last_name, salary, role_id, manager_id)
 VALUES 
-('Mark', 'Miller', 2, null),
-('Devin', 'Anderson', 1, 1),
-('Mary', 'Brown', 4, null),
-('Ashley', 'Jones', 3, 3),
-('Tyler', 'Moore', 6, null),
-('Ana', 'Sanchez', 5, 5),
-('Lewis', 'Allen', 7, null),
-('Katherine', 'Green', 8, 7);
+('Mark', 'Miller', 120000, 2, null),
+('Devin', 'Anderson', 80000, 1, 1),
+('Mary', 'Brown', 150000, 4, null),
+('Ashley', 'Jones', 10000, 3, 3),
+('Tyler', 'Moore', 90000, 6, null),
+('Ana', 'Sanchez', 70000, 5, 5),
+('Lewis', 'Allen', 100000, 7, null),
+('Katherine', 'Green', 90000, 8, 7);

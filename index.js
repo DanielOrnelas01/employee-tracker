@@ -3,7 +3,7 @@ const { prompt } = require('inquirer');
 const db = require('./db')
 require('console.table')
 
-//inital promot
+//inital prompt
 function init() {
     console.log('welcome to employee-tracker')
 prompt({
@@ -56,3 +56,5 @@ function viewemployee(){
                console.table(data[0])
            }).then(()=> setTimeout(init,2000))
 }
+
+//add department
