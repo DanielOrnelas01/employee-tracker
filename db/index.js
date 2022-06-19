@@ -21,6 +21,10 @@ class DB {
         return db.promise().query("INSERT INTO department SET ?", answer);
         
     }
+
+    addroles(answer) {
+        return db.promise().query("INSERT INTO role SET ?, ?, ?", answer);
+    }
 }
 
 
