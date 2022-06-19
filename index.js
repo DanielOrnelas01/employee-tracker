@@ -1,6 +1,4 @@
 const { prompt } = require('inquirer');
-const { updateemployees, adddepartments } = require('./db');
-// const { viewdepartments } = require('./db');
 const db = require('./db')
 require('console.table')
 
@@ -62,7 +60,7 @@ function viewemployee(){
            }).then(()=> setTimeout(init,2000))
 }
 
-//add department
+//add department prompt
 function adddepartment() {
     prompt({
         type: 'input',
