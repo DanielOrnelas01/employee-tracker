@@ -4,8 +4,17 @@ class DB {
     constructor (connection) {
         this.connection = connection
     } 
+    
    viewdepartments(){
       return db.promise().query('SELECT * FROM department');
+    }
+    
+    viewroles(){
+        return db.promise().query('SELECT * FROM role');
+    }
+
+    viewemployees(){
+        return db.promise().query('SELECT * FROM employee');
     }
 }
 
