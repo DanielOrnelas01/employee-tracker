@@ -15,7 +15,11 @@ function init() {
         switch (answer.choice) {
             case 'view all departments':
                 //code to run
-                viewdepartment()
+                viewdepartment().then(() => {
+                    setTimeout(init, 2000)
+                }
+
+                )
                 break;
 
             case 'view all roles':
@@ -43,10 +47,11 @@ init()
 
 //view departments
 function viewdepartment() {
-    db.viewdepartments().then(data => {
+   return db.viewdepartments().then(data => {
         console.log('\n')
         console.table(data[0])
-    }).then(() => setTimeout(init, 2000))
+        return data [0]
+    })
 }
 
 //view roles
@@ -80,6 +85,15 @@ function adddepartment() {
 
 //add role and data
 function addrole() {
+    viewdepartment().then (departments => {
+console.log(departments);
+    const departmentchoices = []
+    for (let i = 0; i < departments.length; i ++) {
+        departmentchoices.push({
+            name: departments[i].name,
+            value:departments[i].id
+        })
+    }
     prompt([
         {
             type: 'input',
@@ -95,13 +109,15 @@ function addrole() {
             type: 'list',
             name: 'department_id',
             message: 'what department is this role in?',
-            choices: ['IT', 'Finance & Accounting', 'Sales & Marketing', 'Operations']
+            choices: departmentchoices
         }
     ])
+
 
         .then(answer => {
             db.addroles(answer).then(answer => {
                 viewrole();
             })
         })
+    })
 }
