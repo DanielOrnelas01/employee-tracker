@@ -96,14 +96,12 @@ function addrole() {
             name: 'department_id',
             message: 'what department is this role in?',
             choices: ['IT', 'Finance & Accounting', 'Sales & Marketing', 'Operations']
-}
-    ]).then(answer => {
-        db.addint(answer)
-    })
-    
-    .then(answer => {
-        db.addroles(answer).then(answer => {
-            viewrole();
+        }
+    ])
+
+        .then(answer => {
+            db.addroles(answer).then(answer => {
+                viewrole();
+            })
         })
-    })
 }
