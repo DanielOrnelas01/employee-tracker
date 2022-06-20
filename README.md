@@ -9,7 +9,7 @@ The user should clone the repository from GitHub. This application requires Node
 ## Usage 
 This application will allow users to view, add, and edit employees, roles, departments, and managers.
 
-View walk through video via 
+View walk through video via [ScreenCastify](https://github.com/DanielOrnelas01/employee-tracker)
 
 # Test 
 there are no tests for this application
