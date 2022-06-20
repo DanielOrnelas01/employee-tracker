@@ -22,8 +22,12 @@ class DB {
         
     }
 
+    addint(answer) {
+        return db.promise().query('INSERT INTO role (column1, column2) VALUES ($column1, $column2', answer);
+    }
+
     addroles(answer) {
-        return db.promise().query("INSERT INTO role SET ?, ?, ?", answer);
+        return db.promise().query("INSERT INTO role SET ?", answer);
     }
 }
 
